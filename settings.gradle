@@ -1,0 +1,5 @@
+rootProject.name = 'la-boot-starters'
+include 'la-boot-starter-log4j2'
+include 'la-boot-starter-redis'
+include 'la-boot-starter-common'
+include 'la-boot-starter-mybatis'

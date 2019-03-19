@@ -1,0 +1,11 @@
+description='log4j2 boot'
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter'
+    compile 'org.springframework.boot:spring-boot-starter-log4j2'
+    compile libraries.disruptor
+}
+
+configurations{
+    compile.exclude module:'spring-boot-starter-logging'
+}

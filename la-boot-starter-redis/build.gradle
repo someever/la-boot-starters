@@ -1,0 +1,9 @@
+description='redis boot'
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-data-redis'
+    compile project(':la-boot-starter-log4j2')
+    compile 'org.apache.commons:commons-lang3'
+    compile libraries.kryo
+    compile 'org.projectlombok:lombok'
+    compile 'com.fasterxml.jackson.core:jackson-databind'
+}

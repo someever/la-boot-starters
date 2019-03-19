@@ -1,0 +1,62 @@
+// 脚本自身执行需要的依赖,在所有脚本之前执行，如果自定义task需要依赖一些类库，就必须在buildscript中引入
+buildscript {
+    ext {
+        springBootVersion = '2.0.1.RELEASE'
+        springCloudVersion = 'Finchley.SR2'
+    }
+    repositories {
+        mavenLocal()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+// 根级别的是为了当前项目提供所需的依赖
+
+
+// allprojects 为所有项目提供依赖
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    repositories {
+        mavenLocal()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        mavenCentral()
+    }
+
+    ext {
+        disruptorVersion = '3.3.7'
+        kryoVersion = '4.0.0'
+
+        libraries = [
+                disruptor: "com.lmax:disruptor:${disruptorVersion}",
+                kryo: "com.esotericsoftware:kryo:${kryoVersion}"
+        ]
+
+    }
+
+}
+
+//subprojects 为所有子module提供依赖
+subprojects {
+    group 'com.la.boot'
+    version '1.0.1-SNAPSHOT'
+    sourceCompatibility = 1.8
+    dependencies {
+        testCompile 'junit:junit'
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        }
+    }
+
+}
