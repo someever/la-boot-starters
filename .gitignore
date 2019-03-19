@@ -1,16 +1,6 @@
-# .gitignore for maven
+# .gitignore
 target/
 *.releaseBackup
-
-# IDE support files
-/.classpath
-/.launch
-/.project
-/.settings
-/*.launch
-/*.tmproj
-/ivy*
-/eclipse
 
 # default HSQL database files for production mode
 /prodDb.*
