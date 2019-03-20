@@ -89,7 +89,6 @@ public class RequestLogAop {
             }else {//用户自定义对象,map,集合
                 String s = JSON.toJSONString(object);
                 map.put(parameterNames[i],s);
-                LOGGER.info("Desensitized REQUEST ARGS : " + parameterNames[i]+":"+s);
             }
         }
         LOGGER.info("REQUEST ARGS ---: " + map.toString());

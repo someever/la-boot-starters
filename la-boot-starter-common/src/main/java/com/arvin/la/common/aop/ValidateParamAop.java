@@ -68,7 +68,7 @@ public class ValidateParamAop {
 
 
 
-    public void ValidateConstraintViolationThrowExpection(Set<ConstraintViolation<Object>> validResult, Method method){
+    private void ValidateConstraintViolationThrowExpection(Set<ConstraintViolation<Object>> validResult, Method method){
         if(!validResult.isEmpty()){
             String[] parameterNames = parameterNameDiscoverer.getParameterNames(method);
             LOGGER.info(parameterNames.toString());
