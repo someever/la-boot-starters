@@ -1,2 +1,5 @@
 description='mybatis boot'
 
+dependencies{
+    compile libraries.mybatisplus
+}
