@@ -34,10 +34,16 @@ allprojects {
     ext {
         disruptorVersion = '3.3.7'
         kryoVersion = '4.0.0'
+        mybatisPlusVersion = '3.0.6'
+        hutoolVersion = '4.0.10'
+        fastjsonVersion = '1.2.46'
 
         libraries = [
                 disruptor: "com.lmax:disruptor:${disruptorVersion}",
-                kryo: "com.esotericsoftware:kryo:${kryoVersion}"
+                kryo: "com.esotericsoftware:kryo:${kryoVersion}",
+                mybatisplus: "com.baomidou:mybatis-plus-boot-starter:${mybatisPlusVersion}",
+                hutool: "cn.hutool:hutool-all:${hutoolVersion}",
+                fastjson: "com.alibaba:fastjson:${fastjsonVersion}"
         ]
 
     }
