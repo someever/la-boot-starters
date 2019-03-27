@@ -1,0 +1,1 @@
+# la-boot-starter-common 微服务公共类库基础组件

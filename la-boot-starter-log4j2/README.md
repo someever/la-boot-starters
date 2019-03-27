@@ -1,1 +1,1 @@
-log4j2 组件，提供统一日志输出
+# la-boot-starter-log4j2 微服务日志基础组件
