@@ -1,0 +1,13 @@
+description='cloud base'
+dependencies {
+    compile project(':la-boot-starter-log4j2')
+    compile project(':la-boot-starter-redis')
+    compile project(':la-boot-starter-mybatis')
+    compile project(':la-boot-starter-common')
+    compile project(':la-boot-starter-feign')
+    compile ('org.springframework.boot:spring-boot-starter-actuator')
+    compile ('org.springframework.cloud:spring-cloud-starter-consul-discovery')
+//    compile ('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+    compile ('org.springframework.cloud:spring-cloud-starter-zipkin')
+    compile ('org.springframework.cloud:spring-cloud-starter-hystrix')
+}

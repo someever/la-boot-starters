@@ -1,0 +1,6 @@
+description='feign'
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter'
+    compile ('org.springframework.cloud:spring-cloud-starter-openfeign')
+    compile ('io.github.openfeign:feign-okhttp')
+}
